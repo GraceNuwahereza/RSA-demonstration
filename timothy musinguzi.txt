@@ -1,0 +1,21 @@
+style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w400),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(plaintext == null ? "" : plaintext),
+                )
+              ],
+            ),
+            const SizedBox(height: 18.0),
+            Column(
+              children: [
+                Text(
+                  "Encrypted /Decrypted Message",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w400),
+                ),
