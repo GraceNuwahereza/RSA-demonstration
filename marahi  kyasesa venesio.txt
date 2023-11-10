@@ -1,0 +1,25 @@
+
+                ///////////////////////////////////////////////
+                SizedBox(
+                  width: 10,
+                ),
+                //////////////////////////////////////////////
+
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      encryptedText =
+                          MyEncryptionDecryption.decryptAES(encryptedText);
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: Text("Decrypt Message"),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
