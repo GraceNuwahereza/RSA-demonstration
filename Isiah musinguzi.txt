@@ -1,0 +1,27 @@
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(encryptedText == null
+                      ? ""
+                      : encryptedText is encrypt.Encrypted
+                          ? encryptedText.base64
+                          : encryptedText),
+                )
+              ],
+            ),
+            const SizedBox(height: 18.0),
+
+            //button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    plaintext = tec.text;
+                    setState(() {
+                      encryptedText =
+                          MyEncryptionDecryption.encryptAES(plaintext);
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: Text("Encrypt Message"),
