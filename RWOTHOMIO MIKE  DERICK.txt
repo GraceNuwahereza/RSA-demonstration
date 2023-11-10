@@ -1,0 +1,27 @@
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Encryption and Decryption App"),
+        backgroundColor: Colors.black,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: TextFormField(
+                controller: tec,
+                decoration: const InputDecoration(
+                  hintText: 'Enter message to encrypt',
+
+                ),
+              ),
+            ),
+            const SizedBox(height: 18.0),
+
+            //Outcome printed
+            Column(
+              children: [
+                Text(
+                  "Original Message",
